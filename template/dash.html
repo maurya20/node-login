@@ -1,0 +1,23 @@
+{% extends 'header.html'%}
+
+{% block content  %}
+<h1 style="text-align:center;">DASHBOARD</h1><br><br><br>
+    <div style="width:100%;">
+    <a <button class="btn" style="width:200px;height:200px;magin:20px;" href="db">
+        All Data</button></a>
+   
+       <a <button class="btn" style="width:200px;height:200px;magin-right:320px;" href="bi">
+        Issue Book</button></a>
+       
+           
+    </div>
+<div style="margin-left:30px">
+<h3>Search Student Record By College ID</h3>
+<form action="">
+  <label for="college_id">College ID:</label><br>
+  <input type="text" id="college_id" name="college_id"><br><br>
+  <input class="btn" style="float:left" type="submit" value="Submit">
+</form>
+</div>
+{% endblock  %}
+
