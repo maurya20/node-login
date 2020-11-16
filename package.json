@@ -1,24 +1,16 @@
 {
-  "name": "rfq_node_react",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "rfq-node-react",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/maurya20/rfq_node_react.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/maurya20/rfq_node_react/issues"
-  },
-  "homepage": "https://github.com/maurya20/rfq_node_react#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1"
   }
 }
