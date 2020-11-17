@@ -12,14 +12,14 @@ const Rfq = () => {
     } else {
       return (
         <div>
-          <h4 style={{ color: "red", textAlign: "center" }}>Product table</h4>
+          <h4 style={{ color: 'rgb(0, 128, 255)', textAlign: "center" }}> Filled RFQ Deatails</h4>
           <table className="table table-hover">
             <thead>
               <tr>
-                <th>Name</th>
+                <th>Product Name</th>
                 <th>Description</th>
-                <th>Price</th>
-                <th>Dimension(l*b*h)</th>
+                <th>Quantity(Pcs.)</th>
+                <th>Place of Delivery</th>
                 <th>Actions</th>
               </tr>
             </thead>
@@ -55,7 +55,7 @@ const Rfq = () => {
   };
   return (
     <div className="container">
-      <h3 style={{ color: "red", textAlign: "center" }}>Request For Quote (RFQ) </h3>
+      <h3 style={{ color: "rgb(0, 153, 153)", textAlign: "center" }}>Request For Quote (RFQ) </h3>
       <p>  A request for quotation is a business process in which a company or public entity requests a quote from a supplier for the purchase of specific products or services. RfQ generally means the same thing as Call for bids and Invitation for bid. An RfQ typically involves more than the price per item.</p>
       <button
         type="button"
@@ -63,7 +63,7 @@ const Rfq = () => {
         data-toggle="modal"
         data-target="#myModal"
       >
-        Add Product
+        Fill RFQ
       </button>
       <div className="modal fade" id="myModal" role="dialog">
         <div className="modal-dialog modal-lg">

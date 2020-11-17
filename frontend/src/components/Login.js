@@ -4,12 +4,10 @@ import React from "react";
 
 const Login = ()=>{
     return (
-      <div className="container">
-        
-        
+      <div className="login">
         <div className="row">
         <div className="col-4 bg-white"></div>
-        <div className="col-4 bg-secondary">
+        <div className="col-3 login-box" >
         <br/>
         <h3>Login Here!!</h3>
         <form
@@ -27,15 +25,19 @@ const Login = ()=>{
             type="password"
             name="password"
           />
-
-          <button type="submit" className="btn btn-primary float-right">
+         <div className="row">
+        <div className="col-1"></div>
+        <button type="submit" className="btn btn-primary login-btn">
             Submit
           </button>
+       
+         </div>
+          
         </form>
         <br/>
         <br/>
         </div>
-        <div className="col-4 bg-white"></div>
+        <div className="col-5 bg-white"></div>
         </div>
 
       </div>
