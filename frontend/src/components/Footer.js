@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-// import '../app.css'
+import React from "react";
+import '../App.css'
 
 const Footer = ()=>{
     return (
-      <div className="footer1">
+      <div className="footer">
         <div className="container-fluid">
           <div className="row">
             <div className="col">
