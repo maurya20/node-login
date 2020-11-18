@@ -54,6 +54,7 @@ const Rfq = () => {
     }
   };
   return (
+    <div className="page">
     <div className="container">
       <h3 style={{ color: "rgb(0, 153, 153)", textAlign: "center" }}>Request For Quote (RFQ) </h3>
       <p>  A request for quotation is a business process in which a company or public entity requests a quote from a supplier for the purchase of specific products or services. RfQ generally means the same thing as Call for bids and Invitation for bid. An RfQ typically involves more than the price per item.</p>
@@ -118,6 +119,7 @@ const Rfq = () => {
       <br></br>
       {/* For Table  */}
       {table()}
+    </div>
     </div>
   );
 };

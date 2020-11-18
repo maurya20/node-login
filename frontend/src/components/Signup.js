@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 
 const Signup = ()=>{
     return (
-      <div>
+      <div className="page">
       <div className="row">
     <div className="col bg-white"></div>
     <div className="col-6 bg-secondary">

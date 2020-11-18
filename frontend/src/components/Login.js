@@ -1,12 +1,13 @@
 import React from "react";
+import "../App.css"
 
 
 
 const Login = ()=>{
     return (
-      <div className="login">
+      <div className="login page">
         <div className="row">
-        <div className="col-4 bg-white"></div>
+        <div className="col-4 login"></div>
         <div className="col-3 login-box" >
         <br/>
         <h3>Login Here!!</h3>
@@ -25,22 +26,20 @@ const Login = ()=>{
             type="password"
             name="password"
           />
-         <div className="row">
-        <div className="col-1"></div>
-        <button type="submit" className="btn btn-primary login-btn">
+        <div className="col-7"></div>
+        <div className="col-5">
+        <button type="submit" className="btn btn-primary right">
             Submit
           </button>
-       
-         </div>
-          
+        </div>  
         </form>
         <br/>
         <br/>
         </div>
-        <div className="col-5 bg-white"></div>
+        <div className="col-5 login"></div>
         </div>
-
-      </div>
+        </div>
+      
     );
   }
 

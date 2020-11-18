@@ -1,29 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 /* For Header Section */
 .navbar {
     background-color: rgb(93, 30, 120);
+    width: 100%;
 }
 
 
 
 /* For Footer Section */
 .footer {
-    background-color: rgba(0, 0, 0, 0.315);
-}
-.design {
-    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
     background-color: aquamarine;
-    color: brown;
-}
+    text-align: center;
+    left: 0;
+    right: 0;
+    height: 2.5rem;            /* Footer height */
+  }
+
 
 
 /* For Login Section */
-.login {
-    margin: 55px;
-}
 .login-box {
     background-color: gainsboro;
     border-radius: 10px;
 }
-.login-btn {
-    margin-left: 150px;
-}
+
+
+
+
+
+.page {
+    position: relative;
+    min-height: 100vh;
+  }
