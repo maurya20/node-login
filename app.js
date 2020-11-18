@@ -6,7 +6,8 @@ var logger = require('morgan');
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 var indexRouter = require('./routes/index');
-var signupRouter = require('./routes/signUp')
+var signupRouter = require('./routes/authRoute')
+const loginRouter = require('./routes/authRoute')
 require('./models/User')
 
 
@@ -32,6 +33,7 @@ app.use(bodyParser.json())
 
 app.use('/api', indexRouter);
 app.use('/api', signupRouter)
+app.use('/api', loginRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
