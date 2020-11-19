@@ -1,9 +1,14 @@
-import React from "react";
+import React,{useState} from "react";
 import "../App.css"
 
 
 
-const Login = ()=>{
+const Login = (props)=>{
+
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+
+
     return (
       <div className=" container login page">
         <div className="row">
@@ -11,20 +16,16 @@ const Login = ()=>{
         <div className="col-3 login-box" >
         <br/>
         <h3>Login Here!!</h3>
-        <form
-          className="form-inline"
-        >
-          <label className="mb-2 mr-sm-2">Username:</label>
+        <form className="form-inline" onSubmit={(e) => props.handle_login(e, {email:email,password:password})}>
+          <label className="mb-2 mr-sm-2">Email:</label>
           <input
-            type="text"
-            className="form-control mb-2 mr-sm-2"
-            name="username"
+            type="email"
+            className="form-control mb-2 mr-sm-2" onChange={(e)=>setEmail(e.target.value)}
           />
           <label className="mb-2 mr-sm-2">Password:</label>
           <input
             className="form-control mb-2 mr-sm-2"
-            type="password"
-            name="password"
+            type="password" onChange={(e)=>setPassword(e.target.value)}
           />
         <div className="col-7"></div>
         <div className="col-5">
