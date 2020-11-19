@@ -6,12 +6,13 @@ const Signup = ()=>{
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [password2, setPassword2] = useState('')
+  const [message, setMessage] = useState("")
 
 const handleSignup = (e)=>{
   
-  // e.preventDefault();
+  e.preventDefault();
   if(password!==password2){
-  return <p>Password do not match!</p>
+  return setMessage("Password do not match!")
   }
   else{
     let userData = {username:username,email:email,password:password}
@@ -24,10 +25,10 @@ const handleSignup = (e)=>{
           'Content-Type': 'application/json'
         },
       }).then(response => {
-        if(!response.ok) throw new Error(response.status);
+        if(response.status==400) setMessage("Email Already Exists")
         else 
         response.json().then(data =>{
-        return <p>{JSON.stringify(data)}</p>
+        return setMessage(data.msg)
         })
     })
   }
@@ -36,7 +37,7 @@ const handleSignup = (e)=>{
     return (
       <div className="page">
       <div className="row">
-    <div className="col bg-white">{handleSignup}</div>
+    <div className="col bg-white"> <h1>{message}</h1> </div>
     <div className="col-6 bg-secondary">
       <h3>Register Here</h3>
     <form  onSubmit={(e)=>handleSignup(e)}>

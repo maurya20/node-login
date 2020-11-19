@@ -34,7 +34,7 @@ router.post("/signup",[
             let user = await User.findOne({email});
             if (user) {
                 return res.status(400).json({
-                    msg: "User Already Exists"
+                    msg: "Email Already Exists"
                 });
             }
 
@@ -59,13 +59,15 @@ router.post("/signup",[
                 (err, token) => {
                     if (err) throw err;
                     res.status(200).json({
-                        token
+                      msg: "SignUp successfull, go ahead and login"
                     });
                 }
             );
         } catch (err) {
             console.log(err.message);
-            res.status(500).send("Error in Saving");
+            res.status(500).json({
+              msg: "Something went wrong!"
+            })
         }
     }
 );
