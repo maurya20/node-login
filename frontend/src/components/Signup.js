@@ -46,15 +46,15 @@ const bg = ()=>{
   return bgmsg = "red"
 }
     return (
-      <div className="page">
+      <div className=" container page">
       <div className="row">
-    <div className="col" style={{backgroundColor:bg()}}>
+    <div className="col-4" style={{backgroundColor:bg()}}>
       <br></br>
       <br></br>
       <br></br>
        <h3>{message}</h3>
       </div>
-    <div className="col-6 bg-secondary">
+    <div className="col-5 bg-secondary">
       <h3>Register Here</h3>
     <form  onSubmit={(e)=>handleSignup(e)}>
     <div className="form-group">
@@ -83,7 +83,7 @@ const bg = ()=>{
   <br/>
   <br/>
     </div>
-    <div className="col bg-white"></div>
+    <div className="col-3"></div>
   </div>
  
       </div>

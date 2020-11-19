@@ -5,7 +5,7 @@ import "../App.css"
 
 const Login = ()=>{
     return (
-      <div className="login page">
+      <div className=" container login page">
         <div className="row">
         <div className="col-4 login"></div>
         <div className="col-3 login-box" >
