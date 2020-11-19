@@ -12,7 +12,8 @@ const handleSignup = (e)=>{
   
   e.preventDefault();
   if(password!==password2){
-  return setMessage("Password do not match!")
+  setMessage("Password do not match!")
+  setTimeout(()=>setMessage(""),4000)
   }
   else{
     let userData = {username:username,email:email,password:password}
@@ -25,7 +26,9 @@ const handleSignup = (e)=>{
           'Content-Type': 'application/json'
         },
       }).then(response => {
-        if(response.status==400) setMessage("Email Already Exists")
+        if(response.status==400) {setMessage("Email Already Exists")
+        setTimeout(()=>setMessage(""),4000)
+      }
         else 
         response.json().then(data =>{
         return setMessage(data.msg)
@@ -33,11 +36,24 @@ const handleSignup = (e)=>{
     })
   }
 }
-  
+const bg = ()=>{
+  let bgmsg = "white"
+  if(message=="")
+  return bgmsg = "white"
+  else if(message=="SignUp successfull, go ahead and login")
+  return bgmsg = "green"
+  else
+  return bgmsg = "red"
+}
     return (
       <div className="page">
       <div className="row">
-    <div className="col bg-white"> <h1>{message}</h1> </div>
+    <div className="col" style={{backgroundColor:bg()}}>
+      <br></br>
+      <br></br>
+      <br></br>
+       <h3>{message}</h3>
+      </div>
     <div className="col-6 bg-secondary">
       <h3>Register Here</h3>
     <form  onSubmit={(e)=>handleSignup(e)}>
