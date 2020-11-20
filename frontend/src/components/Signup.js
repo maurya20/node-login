@@ -38,9 +38,9 @@ const handleSignup = (e)=>{
 }
 const bg = ()=>{
   let bgmsg = "white"
-  if(message=="")
+  if(message==="")
   return bgmsg = "white"
-  else if(message=="SignUp successfull, go ahead and login")
+  else if(message==="SignUp successfull, go ahead and login")
   return bgmsg = "green"
   else
   return bgmsg = "red"
