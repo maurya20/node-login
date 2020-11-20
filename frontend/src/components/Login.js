@@ -1,6 +1,7 @@
-import { response } from "express";
+// import { responsewa } from "express";
 import React,{useState} from "react";
 import "../App.css"
+import axios from "axios"
 
 
 
@@ -14,28 +15,28 @@ const Login = ()=>{
 
   
  
-let handle_login = (e) => {
+const handle_login = (e) => {
   e.preventDefault();
   const data = {email:email,password:password}
-  fetch("http://localhost:4200/api/login/", {
-    method: "POST",
+
+  axios.post("http://localhost:4200/api/login/", data, {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(data),
   })
-    .then((response) => {
-      if (!response.ok) {setMessage("Invilid Credentials ❌")
-      setTimeout(()=>setMessage(""),4000)
-    }
-      else return response.json();
-    })
-    .then((json) => {
-      if(response==200)
-      localStorage.setItem("rfqtoken", json.token);
-    });
-};
-
+  
+    // body: JSON.stringify(data),
+    .then(res => {
+      console.log(res);
+      console.log(res.data);
+      if (res.data.status==400){setMessage({message:"Invalid Credentials ❌ "})
+        setTimeout(()=>{
+        setMessage({message:""})
+        },4000)}
+else 
+localStorage.setItem("rfqtoken", res.data.token);
+});
+}
     return (
       <div className=" container login page">
         <div className="row">
