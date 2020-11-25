@@ -27,7 +27,7 @@ const handle_login = (e) => {
   
     // body: JSON.stringify(data),
     .then(res => {
-      console.log(res)
+      // console.log(res)
 localStorage.setItem("rfqtoken", res.data.token);
 }).catch(function(error) {
   if(error) {setMessage("Invalid Credentials ❌")

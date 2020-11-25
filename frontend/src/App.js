@@ -6,6 +6,7 @@ import Home from "./components//Home";
 import Login from "./components/Login"
 import Signup from "./components/Signup"
 import Rfq from './components/Rfq';
+import {RfqProvider} from './components/RfqContext'
 
 
 const App = ()=>{
@@ -16,7 +17,7 @@ const App = ()=>{
 
 
     return (
-      <div>
+      <RfqProvider>
         <BrowserRouter>
         <Header />
             <Route exact path="/" component={Home} />
@@ -27,7 +28,7 @@ const App = ()=>{
         </BrowserRouter>
        
         <Footer />
-      </div>
+      </RfqProvider>
     )
   }
 

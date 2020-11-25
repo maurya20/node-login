@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import {rfqContext} from './RfqContext'
+
+
 
 const Rfq = () => {
   const [name, setName] = useState("");
