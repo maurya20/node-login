@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {useEffect } from 'react'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import { BrowserRouter, Route, NavLink} from "react-router-dom";
@@ -10,11 +10,6 @@ import {RfqProvider} from './components/RfqContext'
 
 
 const App = ()=>{
-
-  const [logged, setLogged] = useState(false)
- 
-
-
 
     return (
       <RfqProvider>

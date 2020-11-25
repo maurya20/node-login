@@ -1,12 +1,12 @@
 // import { responsewa } from "express";
-import React,{useState} from "react";
+import React,{useState,useContext} from "react";
 import "../App.css"
 import axios from "axios"
-
+import {RfqContext} from './RfqContext'
 
 
 const Login = ()=>{
-
+  const [appState, setAppState] = useContext(RfqContext)
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [message, setMessage] = useState("")

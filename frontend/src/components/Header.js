@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useContext} from "react";
+import {RfqContext} from './RfqContext'
 import Navbar from "react-bootstrap/Navbar";
 import { NavDropdown, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -7,7 +8,7 @@ import { Link } from "react-router-dom";
 
 
 const Header = () => {
-
+  const [appState, setAppState] = useContext(RfqContext)
   return (
     <div>
       <Navbar className="navbar" collapseOnSelect expand="lg" variant="dark">
@@ -35,6 +36,7 @@ const Header = () => {
             </Nav.Link>
           </Nav>
           <Nav>
+          
           <Nav.Link>
               {" "}
               <Link to={"/login"}>Login</Link>

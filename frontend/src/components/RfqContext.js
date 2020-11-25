@@ -1,10 +1,27 @@
-import React, {useState, createContext} from 'react'
- 
+import React, {useState, createContext, useEffect} from 'react'
+import axios from 'axios'
 export const RfqContext = createContext()
 export const RfqProvider = (props)=>{
-    const data = {name:"Mukesh"}
+    const [appState, setAppState] = useState({logged:false, username:"", uid:26})
+    
+    useEffect(() => {
+      axios.get('http://localhost:4200/api/logged/user', {
+        headers: {
+          "Content-Type": "application/json",
+          "token" : `${localStorage.getItem('rfqtoken')}`
+        }
+      }).then(res => 
+        setAppState({username:res.data.username, logged:true})
+        //console.log(res.data)
+      
+      ).catch(function(error) {
+        return
+      });
+        
+    }
+    , []);
     return (
-            <RfqContext.Provider value={data}>
+            <RfqContext.Provider value={[appState, setAppState]}>
                 {props.children}
             </RfqContext.Provider>
     )
