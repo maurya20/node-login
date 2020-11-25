@@ -5,6 +5,8 @@ export const RfqProvider = (props)=>{
     const [appState, setAppState] = useState({logged:false, username:"", uid:26})
     
     useEffect(() => {
+      
+      if (localStorage.getItem('rfqtoken'))
       axios.get('http://localhost:4200/api/logged/user', {
         headers: {
           "Content-Type": "application/json",

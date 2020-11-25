@@ -9,6 +9,32 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const [appState, setAppState] = useContext(RfqContext)
+  const handleLogout = (e)=>{
+    localStorage.removeItem("rfqtoken")
+    setAppState({logged:false, username:""})
+  }
+  const logNav = ()=>{
+    if(appState.logged)
+    return ( <Nav>
+       <Nav.Link>
+             <Link to={"/logout"} onClick={handleLogout}>Hello {appState.username},  Logout</Link>
+            </Nav.Link>
+            </Nav> )
+else 
+return (
+<Nav>
+          
+          <Nav.Link>
+              {" "}
+              <Link to={"/login"}>Login</Link>
+            </Nav.Link>
+            <Nav.Link>
+              {" "}
+              <Link to={"/signup"}>SignUp</Link>
+            </Nav.Link>
+          </Nav>
+)
+}
   return (
     <div>
       <Navbar className="navbar" collapseOnSelect expand="lg" variant="dark">
@@ -35,17 +61,8 @@ const Header = () => {
               <Link to={"/rfq"}>RFQ</Link>
             </Nav.Link>
           </Nav>
-          <Nav>
-          
-          <Nav.Link>
-              {" "}
-              <Link to={"/login"}>Login</Link>
-            </Nav.Link>
-            <Nav.Link>
-              {" "}
-              <Link to={"/signup"}>SignUp</Link>
-            </Nav.Link>
-          </Nav>
+         
+          {logNav()}
         </Navbar.Collapse>
       </Navbar>
     </div>
