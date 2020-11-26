@@ -2,10 +2,9 @@ import React, {useState, createContext, useEffect} from 'react'
 import axios from 'axios'
 export const RfqContext = createContext()
 export const RfqProvider = (props)=>{
-    const [appState, setAppState] = useState({logged:false, username:"", uid:26})
+    const [appState, setAppState] = useState({kitkat:"", logged:false, username:"", uid:26})
     
     useEffect(() => {
-      
       if (localStorage.getItem('rfqtoken'))
       axios.get('http://localhost:4200/api/logged/user', {
         headers: {
@@ -21,7 +20,7 @@ export const RfqProvider = (props)=>{
       });
         
     }
-    , []);
+    , [appState.kitkat]);
     return (
             <RfqContext.Provider value={[appState, setAppState]}>
                 {props.children}

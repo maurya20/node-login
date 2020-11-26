@@ -2,10 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {RfqProvider} from './components/RfqContext'
+
 
 ReactDOM.render(
 <React.StrictMode>
-    <App />
+    <RfqProvider>
+        <App/>
+    </RfqProvider>
 </React.StrictMode>, 
  document.getElementById('root')
 );

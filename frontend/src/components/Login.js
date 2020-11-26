@@ -29,6 +29,7 @@ const handle_login = (e) => {
     .then(res => {
       // console.log(res)
 localStorage.setItem("rfqtoken", res.data.token);
+setAppState({kitkat:"pass"})
 }).catch(function(error) {
   if(error) {setMessage("Invalid Credentials ❌")
   setTimeout(()=>{
