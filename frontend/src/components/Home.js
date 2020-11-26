@@ -45,14 +45,80 @@ const Home =()=>{
                         {item.name}
                       </h6>
                       <p>{item.description}</p>
-                      <button type="button" className="btn btn-primary btn-block">RFQ </button>
                     </div>
                   </Card.Footer>
+
+                  <button
+        type="button"
+        className="btn btn-info btn-block"
+        data-toggle="modal"
+        data-target="#myModal"
+      >
+       RFQ
+      </button>
+      <div className="modal fade" id="myModal" role="dialog">
+        <div className="modal-dialog modal-lg">
+          <div className="modal-content">
+            <div className="modal-header">
+              <button type="button" className="close" data-dismiss="modal">
+                &times;
+              </button>
+              <h4 className="modal-title"></h4>
+            </div>
+            <div className="modal-body">
+              <label className="mb-2 mr-sm-2">Name:</label>
+              <input
+                type="text"
+                className="form-control mb-2 mr-sm-2"
+                value={item.name}
+              />
+               <label className="mb-2 mr-sm-2">Part Number:</label>
+              <input
+                type="text"
+                className="form-control mb-2 mr-sm-2"
+               value={item.partnumber}
+              />
+              <label className="mb-2 mr-sm-2">Required Quantity:</label>
+              <input
+                type="text"
+                className="form-control mb-2 mr-sm-2"
+              />
+               <label className="mb-2 mr-sm-2">Your Company Name:</label>
+              <input
+                type="text"
+                className="form-control mb-2 mr-sm-2"
+              
+              />
+               <label className="mb-2 mr-sm-2">RFQ Description:</label>
+              <input
+                type="text"
+                className="form-control mb-2 mr-sm-2"
+                
+              />
+            </div>
+            <div className="modal-footer">
+              <button
+                type="button"
+                className="btn btn-primary"
+                data-dismiss="modal"
+              >
+                Send
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+
+
+
+
+
                 </div>
               );
             })}
           </div>
-         
+          <br></br>
         </div>
       );
   }

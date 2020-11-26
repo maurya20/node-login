@@ -52,13 +52,10 @@ return (
               {" "}
               <Link to={"/"}>About</Link>
             </Nav.Link>
+           
             <Nav.Link>
               {" "}
-              <Link to={"/products"}>Products</Link>
-            </Nav.Link>
-            <Nav.Link>
-              {" "}
-              <Link to={"/rfq"}>RFQ</Link>
+              <Link to={"/dash"}>Dash Board</Link>
             </Nav.Link>
           </Nav>
          

@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Redirect} from "react-router-dom";
 import Home from "./components//Home";
 import Login from "./components/Login"
 import Signup from "./components/Signup"
-import Rfq from './components/Rfq';
+import Dash from './components/Dash';
 import {RfqContext} from './components/RfqContext'
 
 
@@ -18,7 +18,7 @@ const App = ()=>{
         <BrowserRouter>
         <Header />
             <Route exact path="/" component={Home} />
-            <Route path="/rfq" component={Rfq} />
+            <Route path="/dash" component={Dash} />
             <Route path="/login" render={() => appState.logged ? (<Redirect to="/" />) : (<Login />)}/>
             <Route path="/signup" component={Signup} />
            
