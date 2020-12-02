@@ -12,7 +12,7 @@ import {RfqContext} from './components/RfqContext'
 const App = ()=>{
  const [appState, setAppState] = useContext(RfqContext)
   
-  const chek = true
+ 
     return (
       <div>
         <BrowserRouter>

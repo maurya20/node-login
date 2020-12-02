@@ -40,3 +40,16 @@
     position: relative;
     min-height: 80vh;
   }
+
+
+  .dash{
+    text-align: center;
+      background-color: rgb(15, 13, 13);
+  }
+  .dash h3{
+      color: aqua;
+      
+  }
+.rfqcol{
+    color: brown;
+}

@@ -9,7 +9,9 @@ var indexRouter = require('./routes/index');
 var signupRouter = require('./routes/authRoute')
 const loginRouter = require('./routes/authRoute')
 const loggedRouter = require('./routes/authRoute')
+
 require('./models/User')
+require('./models/Products')
 const cors = require('cors')
 
 
@@ -40,6 +42,7 @@ app.use('/api', indexRouter);
 app.use('/api', signupRouter)
 app.use('/api', loginRouter)
 app.use('/api', loggedRouter)
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

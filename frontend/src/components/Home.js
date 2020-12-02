@@ -39,7 +39,6 @@ const Home =()=>{
                   <Card.Footer>
                     <div className="caption">
                       <h6 style={{ color: "blue" }}>
-                      
                       </h6>
                       <h6>
                         {item.name}
@@ -58,7 +57,7 @@ const Home =()=>{
       </button>
       <div className="modal fade" id="myModal" role="dialog">
         <div className="modal-dialog modal-lg">
-          <div className="modal-content">
+          <div className="modal-content" key={item.id}>
             <div className="modal-header">
               <button type="button" className="close" data-dismiss="modal">
                 &times;
@@ -108,15 +107,10 @@ const Home =()=>{
           </div>
         </div>
       </div>
-        
-
-
-
-
-
-                </div>
+      </div>   
               );
             })}
+            
           </div>
           <br></br>
         </div>
