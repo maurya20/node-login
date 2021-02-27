@@ -1,12 +1,27 @@
 import React from "react";
 import "./App.css";
-import { Login } from "./Login";
+import { BrowserRouter, Route, Link } from "react-router-dom";
+import { Register } from "./authTheme/components/Register";
+import { Login } from "./authTheme/components/Login";
+import { Container } from "@material-ui/core";
+import Header from "./components/Header";
+
 function App() {
   return (
-    <div>
-      <div>Hello</div>
-      <Login />
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Container
+        maxWidth="lg"
+        style={{ backgroundColor: "gray", height: "100vh" }}
+      >
+        <Route path={"/register"}>
+          <Register />
+        </Route>
+        <Route path={"/login"}>
+          <Login />
+        </Route>
+      </Container>
+    </BrowserRouter>
   );
 }
 
