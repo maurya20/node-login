@@ -21,7 +21,7 @@ export const Register: React.FC = () => {
   const [password, setPassword] = React.useState("");
   const [confirmPassword, setconfirmPassword] = React.useState("");
   const onPasswordChange = () => {
-    console.log("password changed");
+    console.log("password changed", password);
   };
   return (
     <div className={classes.root}>

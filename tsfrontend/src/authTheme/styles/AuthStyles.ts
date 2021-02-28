@@ -9,7 +9,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       padding: theme.spacing(6),
       textAlign: "center",
       color: theme.palette.text.primary,
-      marginTop: "50px",
+      margin: "50px 0 50px 0",
     },
     form:{
       marginBottom: "20px"
@@ -18,7 +18,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       textTransform : "none",
       marginTop:"20px",
       padding:"5px",
-      width: "90%",
+      width: "100%",
     }
   })
 );
