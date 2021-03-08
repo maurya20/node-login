@@ -5,12 +5,27 @@
         <div class="nav-menu">Home</div>
         <div class="nav-menu">About</div>
         <div class="nav-menu">Products</div>
-        <div class="nav-menu">Login/Register</div>
+        <a class="nav-menu" @click="switchComponent('Login')">Login/Register</a>
     </div>
 </template>
 
 <script>
+import { bus } from '@/main.js';
 
+export default {
+    props: {
+        currentComp: {
+            type: String,
+            required: true
+        }
+    },
+
+    methods: {
+        switchComponent(comp) {
+            bus.$emit('switchComp', comp);
+        }
+    }
+}
 </script>
 
 <style>
@@ -25,6 +40,5 @@
         padding-top: 23px;
         color: white;
         font-weight: bold;
-        cursor: pointer;
     }
 </style>

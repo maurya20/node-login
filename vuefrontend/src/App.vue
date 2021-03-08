@@ -2,7 +2,7 @@
   <v-app>
   <v-main>
       <Header/>
-      <Home/>
+      <component :is="currentComp"></component>
       <Footer/>
     </v-main>
   </v-app>
@@ -12,6 +12,8 @@
 import Header from "./components/main/Header";
 import Footer from "./components/main/Footer";
 import Home from "./components/main/Home";
+import Login from "./components/user/Login";
+import { bus } from '@/main.js';
 
 export default {
   name: 'App',
@@ -19,13 +21,22 @@ export default {
   components: {
     Header,
     Footer,
-    Home
+    Home,
+    Login
 
   },
 
-  data: () => ({
-    //
-  }),
+    data() {
+    return {
+      currentComp: 'Home'
+    };
+  },
+
+  created() {
+      bus.$on('switchComp', comp => {
+           this.currentComp = comp;
+      })
+  },
 };
 </script>
 
