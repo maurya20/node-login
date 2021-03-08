@@ -1,23 +1,32 @@
 <template>
-  <div id="app">
-    <Header/>
-    <Home/>
-    <Footer/>
-  </div>
+  <v-app>
+  <v-main>
+      <Header/>
+      <Home/>
+      <Footer/>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
 import Header from "./components/main/Header";
 import Footer from "./components/main/Footer";
 import Home from "./components/main/Home";
+
 export default {
   name: 'App',
+
   components: {
     Header,
     Footer,
     Home
-  }
-}
+
+  },
+
+  data: () => ({
+    //
+  }),
+};
 </script>
 
 <style>
@@ -35,3 +44,4 @@ export default {
     padding: 0;
   }
 </style>
+
