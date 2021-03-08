@@ -4,7 +4,7 @@
         <div class="nav-menu"></div>
         <a class="nav-menu" @click="switchComponent('Home')" :disabled="currentComp === 'Home'">Home</a>
         <div class="nav-menu">About</div>
-        <div class="nav-menu">Products</div>
+        <a class="nav-menu" @click="switchComponent('Products')" :disabled="currentComp === 'Products'">Products</a>
         <a class="nav-menu" @click="switchComponent('Login')" :disabled="currentComp === 'Login'">Login/Register</a>
     </div>
 </template>

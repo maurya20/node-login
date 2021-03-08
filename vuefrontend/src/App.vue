@@ -12,6 +12,7 @@
 import Header from "./components/main/Header";
 import Footer from "./components/main/Footer";
 import Home from "./components/main/Home";
+import Products from "./components/product/Products";
 import Login from "./components/user/Login";
 import { bus } from '@/main.js';
 
@@ -22,6 +23,7 @@ export default {
     Header,
     Footer,
     Home,
+    Products,
     Login
 
   },
