@@ -34,6 +34,7 @@
 <style>
     .products {
         width: 100%;
+        min-height: 400px;
         margin-top: 50px;
     }
     .block {

@@ -1,6 +1,6 @@
 <template>
     <div class="header">
-        <div class="nav-menu">LOGO</div>
+        <div class="nav-menu text-left"><h1>LOGO</h1></div>
         <div class="nav-menu"></div>
         <a class="nav-menu" @click="switchComponent('Home')" :disabled="currentComp === 'Home'">Home</a>
         <div class="nav-menu">About</div>
@@ -37,7 +37,7 @@ export default {
     .nav-menu {
         display: inline-block;
         width: 16%;
-        padding-top: 23px;
+        padding-top: 8px;
         color: white;
         font-weight: bold;
     }
